@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import header from './header.vue'
+import site_header from './header.vue'
 import hero from './hero.vue'
 import overview from './overview.vue'
 import gallery from './gallery.vue'
@@ -28,7 +28,7 @@ import contact from './contact.vue'
 export default {
   name: 'index',
   components: {
-    ats_header: header,
+    ats_header: site_header,
     ats_hero: hero,
     ats_overview: overview,
     ats_gallery: gallery,

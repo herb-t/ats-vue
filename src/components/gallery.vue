@@ -6,11 +6,11 @@
 
 <template>
   <div class="gallery">
-    <div class="ats-main">
+    <!-- <div class="ats-main">
       <div class="gallery__title">
         <h1>{{title}}</h1>
       </div>
-    </div>
+    </div> -->
 
     <ats_carousel_cakes></ats_carousel_cakes>
     <ats_carousel_cupcakes></ats_carousel_cupcakes>

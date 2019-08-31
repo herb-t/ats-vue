@@ -133,7 +133,7 @@
 
 <script>
 export default {
-  name: 'header',
+  name: 'site_header',
   data () {
     return {
       label: 'ATS'
