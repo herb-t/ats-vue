@@ -5,7 +5,7 @@
 </style>
 
 <template>
-  <div class="gallery">
+  <div class="gallery" id="gallery">
     <!-- <div class="ats-main">
       <div class="gallery__title">
         <h1>{{title}}</h1>

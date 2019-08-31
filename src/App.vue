@@ -33,6 +33,7 @@
   ul {
     list-style: none;
     margin: 0;
+    padding: 0;
   }
 
   p,
@@ -137,6 +138,10 @@
     flex: auto 0 auto;
     margin: 0 2.65152%;
     width: 100%;
+  }
+
+  body.header__drawer--is-showing {
+    overflow: hidden;
   }
 
   @media (min-width: 600px) {

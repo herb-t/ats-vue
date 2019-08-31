@@ -151,15 +151,13 @@
 </style>
 
 <template>
-  <div class="services">
+  <div class="services" id="services">
     <h1 class="services__title">{{ label }}</h1>
 
     <div class="ats-page">
       <div class="ats-grid">
         <div class="ats-grid__col" v-for="(card, index) in cards">
-            <div class="ats-card" :id="card.id">
-        <!-- <div class="ats-grid__col">
-          <div class="ats-card" v-for="(card, index) in cards"> -->
+          <div class="ats-card" :id="card.id">
             <div class="ats-card__title" v-if="index === 0" :id="index">
               <svg version="1.1" class="desktop" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 161.5 71.9" style="enable-background:new 0 0 161.5 71.9;" xml:space="preserve">
               <g>

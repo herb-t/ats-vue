@@ -75,7 +75,7 @@
 </style>
 
 <template>
-  <div class="overview">
+  <div class="overview" id="overview">
     <div class="ats-page">
       <div class="ats-grid">
         <div class="overview__card ats-grid__col ats-grid__col--3" v-for="card in cards">

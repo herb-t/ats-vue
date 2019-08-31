@@ -132,8 +132,18 @@
     cursor: pointer;
   }
 
+  .flickity-button-icon {
+    fill: #cf6059 !important;
+  }
+
   .flickity-page-dots .dot.is-selected {
     opacity: 1;
+  }
+
+  @media (max-width: 601px) {
+    .flickity-button {
+      display: none;
+    }
   }
 
   .carousel-cell {

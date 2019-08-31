@@ -5,7 +5,7 @@
 </style>
 
 <template>
-  <div class="contact">
+  <div class="contact" id="contact">
     <h1 class="contact__title">{{ label }}</h1>
   </div>
 </template>
