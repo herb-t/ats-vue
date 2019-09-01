@@ -89,10 +89,11 @@
   /* off canvas mobile nav */
   .header__drawer {
     background: #fff;
+    bottom: 0;
     box-shadow: 0 2px 6px 0 rgba(0,0,0,0.12);
     left: 0;
-    height: 100vh;
     position: fixed;
+    right: 0;
     top: 0;
     transform: translateX(-280px);
     transition: transform .35s cubic-bezier(0.24, 1, 0.32, 1), -webkit-transform .35s cubic-bezier(0.24, 1, 0.32, 1);

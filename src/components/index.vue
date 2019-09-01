@@ -68,11 +68,11 @@ export default {
         if (!modal_.classList.contains('modal-is-showing')) {
           modal_.classList.add('modal-is-showing')
           tl.play();
-          // body_.classList.add('modal-is-showing')
+          body_.classList.add('modal-is-showing')
         } else {
           modal_.classList.remove('modal-is-showing')
           tl.reverse();
-          // body_.classList.remove('modal-is-showing')
+          body_.classList.remove('modal-is-showing')
         }
       });
     }
