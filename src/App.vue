@@ -140,6 +140,17 @@
     width: 100%;
   }
 
+  .modal-is-showing {
+    pointer-events: all !important;
+  }
+
+  /* .modal-is-showing .modal__backdrop,
+  .modal-is-showing .modal__container {
+    opacity: 1 !important;
+    visibility: visible !important;
+  } */
+
+  body.modal-is-showing,
   body.header__drawer--is-showing {
     overflow: hidden;
   }

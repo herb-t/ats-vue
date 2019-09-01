@@ -103,7 +103,7 @@
             <p class="overview__card-text">{{card.serving3}}</p>
 
             <div class="overview__card-cta">
-              <button class="ats-button">{{cta_label}}</button>
+              <button class="ats-button modal-toggle">{{cta_label}}</button>
             </div>
           </div>
         </div>

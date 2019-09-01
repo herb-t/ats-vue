@@ -423,7 +423,7 @@
               <p class="ats-card__text" v-html="card.text">{{card.text}}</p>
 
               <div class="ats__card-cta">
-                <button class="ats-button">{{cta_label}}</button>
+                <button class="ats-button modal-toggle">{{cta_label}}</button>
               </div>
             </div>
           </div>
@@ -458,22 +458,7 @@ export default {
   },
   mounted: function() {
     let controller = new ScrollMagic.Controller();
-
-    // const tl = new TimelineMax();
-    // tl.to(".ats-card:nth-of-type(1)", 2, {x: 0, delay: 3, autoAlpha: 1, ease: Power2.easeOut});
-    // tl.to(".ats-card:nth-of-type(2)", 2, {x: 0, delay: 4, autoAlpha: 1, ease: Power3.easeOut}, 4);
-    // tl.to(".ats-card:nth-of-type(3)", 2, {x: 0, delay: 5, autoAlpha: 1, ease: Power4.easeOut}, 5);
-
-    // new ScrollMagic.Scene({
-    //   triggerElement: ".services",
-    //   triggerHook: "onEnter", // show, when scrolled 10% into view
-    //   duration: "100%", // use full viewport
-    //   offset: 50 // move trigger to center of element
-    // })
-    // .setTween(tl)
-    // .addTo(controller);
     let elements = this.$el.querySelectorAll('.ats-grid__col');
-    console.log('elements: ', elements)
 
     for (let index = 0; index < elements.length; index++) {
       const element = elements[index];

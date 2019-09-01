@@ -447,14 +447,13 @@
         </ul>
 
         <div class="header__drawer-cta">
-          <button class="ats-button">Find out more</button>
+          <button class="ats-button modal-toggle">Find out more</button>
         </div>
       </div>
 
       <div class="header__drawer-backdrop" v-on:click="handleDrawerToggle"></div>
     </div>
 
-    <!-- <div class="header__drawer-backdrop"></div> -->
   </header>
 </template>
 
@@ -474,7 +473,7 @@ export default {
 
       let target_ = '#' + element.textContent;
 
-      element.addEventListener('click', function() {
+      element.addEventListener('click', () => {
         TweenMax.to(window, 0.6, {
           scrollTo: {
             y: target_,
