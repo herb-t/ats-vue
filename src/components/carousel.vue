@@ -53,12 +53,7 @@
 
   .carousel__divider {
     background-color: #cf6059;
-    /* background-image: url(/static/images/icon-asterisk-white.png);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: 25px; */
     box-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(0,0,0,.23);
-    /* height: 50px; */
     margin: 54px 0;
     padding: 14px 0;
     width: 100%;

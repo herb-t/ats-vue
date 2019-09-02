@@ -7,13 +7,17 @@
     background-size: 1000px;
     background-position: center center;
     margin-top: 24px;
-    padding: 0 0 54px;
+    padding: 0 0 72px;
     text-align: center;
   }
 
   h3 {
     font-family: 'Nixie One',cursive;
     margin: 0 0 24px 0;
+  }
+
+  .ats-grid {
+    transform: translateY(32px);
   }
 
   .contact__heading {
@@ -65,7 +69,7 @@
     fill:#fff;
   }
 
-  @media (min-width: 900px) {
+  @media (min-width: 640px) {
     .contact {
       background-size: cover;
     }

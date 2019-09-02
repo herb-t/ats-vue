@@ -1,7 +1,7 @@
 <style scoped>
   .modal {
+    display: none;
     opacity: 0;
-    pointer-events: none;
     position: fixed;
     z-index: 175;
   }
@@ -13,6 +13,7 @@
     border-radius: 4px;
     height: 93%;
     left: 50%;
+    max-width: 700px;
     padding: 16px;
     position: fixed;
     top: 50%;

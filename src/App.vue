@@ -141,7 +141,7 @@
   }
 
   .modal-is-showing {
-    pointer-events: all !important;
+    display: block !important;
   }
 
   /* .modal-is-showing .modal__backdrop,

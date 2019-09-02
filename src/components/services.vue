@@ -1,8 +1,11 @@
 <style scoped>
   .services {
     background: #cf6059;
+    box-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(0,0,0,.23);
     margin-top: 100px;
+    overflow: hidden;
     padding: 100px 0;
+    position: relative;
   }
 
   /* .ats-page {

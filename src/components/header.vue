@@ -54,7 +54,7 @@
 
   .header__nav-list-item-link:after {
     background-color: #cf6059;
-    bottom: -8px;
+    bottom: -22px;
     content: '';
     display: inline-block;
     left: 0;
