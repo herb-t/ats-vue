@@ -23,6 +23,7 @@
     color: #fff;
     margin-bottom: 54px;
     margin-top: 0;
+    text-transform: uppercase;
   }
 
   .ats-grid__col {
@@ -142,12 +143,18 @@
       margin-top: 100px;
       padding: 100px 0;
     }
+
+    .services__title {
+      font-size: 48px;
+      line-height: 56px;
+    }
   
     .ats-card {
       display: flex;
     }
 
     .services__heading {
+      background-position: center center;
       background-size: 1100px;
     }
 

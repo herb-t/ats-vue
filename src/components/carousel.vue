@@ -16,6 +16,10 @@
     background: #cf6059 !important;
   }
 
+  .overview__mobile .flickity-page-dots .dot {
+    background: #fff !important;
+  }
+
   @media (max-width: 601px) {
     .flickity-button {
       display: none;
@@ -43,6 +47,7 @@
 
   .carousel__title {
     margin-top: 0;
+    text-transform: uppercase;
   }
 
   .carousel__copy {
@@ -79,6 +84,11 @@
   }
 
   @media (min-width: 900px) {
+    .carousel__title {
+      font-size: 48px;
+      line-height: 56px;
+    }
+
     .carousel__copy {
       background: url(/static/images/title-bg-cupcakes.png) no-repeat center center;
       background-size: 1080px;
