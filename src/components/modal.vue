@@ -14,6 +14,7 @@
     height: 93%;
     left: 50%;
     max-width: 700px;
+    overflow: auto;
     padding: 16px;
     position: fixed;
     top: 50%;

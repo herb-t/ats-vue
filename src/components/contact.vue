@@ -69,6 +69,12 @@
     fill:#fff;
   }
 
+  @media (max-width: 901px) {
+    .contact__heading svg {
+      max-height: 32px;
+    }
+  }
+
   @media (min-width: 640px) {
     .contact {
       background-size: cover;

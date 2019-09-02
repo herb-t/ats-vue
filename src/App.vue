@@ -144,6 +144,10 @@
     display: block !important;
   }
 
+  .ats-card__span {
+    font-weight: 700 !important;
+  }
+
   /* .modal-is-showing .modal__backdrop,
   .modal-is-showing .modal__container {
     opacity: 1 !important;

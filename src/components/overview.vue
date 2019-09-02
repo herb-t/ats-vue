@@ -2,7 +2,7 @@
   .overview {
     background: #cf6059;
     box-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(0,0,0,.23);
-    padding: 100px 0;
+    padding: 54px 0;
   }
 
   .overview__card {
@@ -43,7 +43,6 @@
   }
 
   .overview__card-text {
-    font-weight: 400;
     margin-bottom: 8px;
   }
 
@@ -64,6 +63,9 @@
   }
 
   @media (min-width: 900px) {
+    .overview {
+      padding: 100px 0;
+    }
     .overview__card {
       margin: 0 1.03799%;
     }
