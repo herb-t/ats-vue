@@ -477,8 +477,7 @@ export default {
       element.addEventListener('click', () => {
         TweenMax.to(window, 0.6, {
           scrollTo: {
-            y: target_,
-            offsetY: 50
+            y: target_
           },
           ease: Power1.easeOut
         });
@@ -489,8 +488,6 @@ export default {
     handleDrawerToggle: function () {
       let body_ = document.querySelector('body')
       let drawer = this.$el.querySelector('.header__drawer')
-
-      console.log(body_)
 
       if (!drawer.classList.contains('header__drawer--is-showing')) {
         drawer.classList.add('header__drawer--is-showing')

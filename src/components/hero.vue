@@ -49,13 +49,20 @@
     width: 100px;
   }
 
+  @media (max-width: 901px) {
+    .hero__copy-container {
+      margin: 0 auto;
+      max-width: 400px;
+    }
+  }
+
   @media (min-width: 900px) {
     .hero {
      margin-top: 64px;
     }
   
     .hero__background {
-      background-image: url(/static/images/bg-hero.jpg);
+      background-image: url(/static/images/bg-hero-10_flip.jpg);
     }
 
     .hero__image svg {
@@ -75,7 +82,7 @@
     }
 
     .hero__copy-container {
-      margin: 32px;
+      margin: 32px 32px 32px 0;
     }
   }
 </style>

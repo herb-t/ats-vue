@@ -1,143 +1,19 @@
 <style>
-  /*! Flickity v2.2.1
-  https://flickity.metafizzy.co
-  ---------------------------------------------- */
-  .flickity-enabled {
-    position: relative;
-  }
-
-  .flickity-enabled:focus { outline: none; }
 
   .flickity-viewport {
-    overflow: hidden;
-    position: relative;
-    height: 100%;
-  }
-
-  .flickity-slider {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-  }
-
-  /* draggable */
-
-  .flickity-enabled.is-draggable {
-    -webkit-tap-highlight-color: transparent;
-    -webkit-user-select: none;
-      -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
-  }
-
-  .flickity-enabled.is-draggable .flickity-viewport {
-    cursor: move;
-    cursor: -webkit-grab;
-    cursor: grab;
-  }
-
-  .flickity-enabled.is-draggable .flickity-viewport.is-pointer-down {
-    cursor: -webkit-grabbing;
-    cursor: grabbing;
-  }
-
-  /* ---- flickity-button ---- */
-
-  .flickity-button {
-    position: absolute;
-    background: hsla(0, 0%, 100%, 0.75);
-    border: none;
-    color: #333;
-  }
-
-  .flickity-button:hover {
-    background: white;
-    cursor: pointer;
-  }
-
-  .flickity-button:focus {
-    outline: none;
-    box-shadow: 0 0 0 5px #19F;
-  }
-
-  .flickity-button:active {
-    opacity: 0.6;
-  }
-
-  .flickity-button:disabled {
-    opacity: 0.3;
-    cursor: auto;
-    /* prevent disabled button from capturing pointer up event. #716 */
-    pointer-events: none;
-  }
-
-  .flickity-button-icon {
-    fill: currentColor;
-  }
-
-  /* ---- previous/next buttons ---- */
-
-  .flickity-prev-next-button {
-    top: 50%;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    /* vertically center */
-    transform: translateY(-50%);
-  }
-
-  .flickity-prev-next-button.previous { left: 10px; }
-  .flickity-prev-next-button.next { right: 10px; }
-  /* right to left */
-  .flickity-rtl .flickity-prev-next-button.previous {
-    left: auto;
-    right: 10px;
-  }
-  .flickity-rtl .flickity-prev-next-button.next {
-    right: auto;
-    left: 10px;
-  }
-
-  .flickity-prev-next-button .flickity-button-icon {
-    position: absolute;
-    left: 20%;
-    top: 20%;
-    width: 60%;
-    height: 60%;
-  }
-
-  /* ---- page dots ---- */
-
-  .flickity-page-dots {
-    position: absolute;
-    width: 100%;
-    bottom: -25px;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    text-align: center;
-    line-height: 1;
-  }
-
-  .flickity-rtl .flickity-page-dots { direction: rtl; }
-
-  .flickity-page-dots .dot {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    margin: 0 8px;
-    background: #333;
-    border-radius: 50%;
-    opacity: 0.25;
-    cursor: pointer;
+    padding-bottom: 24px;
   }
 
   .flickity-button-icon {
     fill: #cf6059 !important;
   }
 
-  .flickity-page-dots .dot.is-selected {
-    opacity: 1;
+  .flickity-page-dots {
+    height: 32px;
+  }
+
+  .flickity-page-dots .dot {
+    background: #cf6059 !important;
   }
 
   @media (max-width: 601px) {
@@ -165,8 +41,53 @@
     width: 100%;
   }
 
+  .carousel__title {
+    margin-top: 0;
+  }
+
   .carousel__copy {
+    background: url(/static/images/title-bg-cakes.png) no-repeat center center;
+    background-size: 900px;
     text-align: center;
+  }
+
+  .carousel__divider {
+    background-color: #cf6059;
+    /* background-image: url(/static/images/icon-asterisk-white.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 25px; */
+    box-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(0,0,0,.23);
+    /* height: 50px; */
+    margin: 54px 0;
+    padding: 14px 0;
+    width: 100%;
+  }
+
+  .carousel__divider svg {
+    display: block;
+    fill: #fff;
+    height: 24px;
+    margin: 0 auto;
+    width: 24px;
+  }
+
+  .carousel:nth-of-type(3) .carousel__divider {
+    display: none;
+  }
+
+  @media (max-width: 901px) {
+    .flickity-page-dots {
+      box-sizing: border-box !important;
+      padding: 0 16px !important;
+    }
+  }
+
+  @media (min-width: 900px) {
+    .carousel__copy {
+      background: url(/static/images/title-bg-cupcakes.png) no-repeat center center;
+      background-size: 1080px;
+    }
   }
 
 </style>
@@ -182,6 +103,20 @@
         <img :src="slide.url">
       </div>
     </flickity>
+
+    <div class="carousel__divider">
+      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="42.443px" height="42.444px" viewBox="0 0 42.443 42.444" enable-background="new 0 0 42.443 42.444" xml:space="preserve">
+      <path class="icon-asterisk-fill" d="M39.782,18.697H28.924c-0.631,0-0.884-0.758-0.505-1.137l7.702-7.702c0.884-0.884,1.137-2.525,0.252-3.535
+        c-1.01-1.137-2.651-1.263-3.661-0.126l-7.828,7.828c-0.379,0.379-1.137,0.126-1.137-0.505V2.661c0-1.389-1.01-2.524-2.272-2.651
+        c-1.516-0.126-2.778,1.011-2.778,2.525v10.985c0,0.631-0.757,0.884-1.136,0.505L9.731,6.197C8.722,5.187,6.954,5.187,6.07,6.323
+        c-0.884,1.01-0.632,2.525,0.252,3.535l7.702,7.702c0.379,0.379,0.127,1.137-0.505,1.137H2.661c-1.389,0-2.525,1.01-2.651,2.272
+        c-0.126,1.515,1.01,2.777,2.525,2.777H13.52c0.632,0,0.884,0.758,0.505,1.137l-7.701,7.702c-1.011,1.01-1.137,2.777,0,3.788
+        c0.505,0.378,1.136,0.631,1.641,0.631c0.632,0,1.263-0.253,1.769-0.758l7.828-7.828c0.379-0.379,1.136-0.126,1.136,0.505v10.859
+        c0,1.389,1.011,2.524,2.273,2.651c1.515,0.126,2.777-1.011,2.777-2.525V28.924c0-0.631,0.758-0.884,1.137-0.505l7.828,7.828
+        c0.505,0.505,1.137,0.758,1.768,0.758c0.632,0,1.263-0.253,1.642-0.631c1.01-1.011,1.01-2.778,0-3.788l-7.702-7.702
+        c-0.632-0.632-0.379-1.137,0.505-1.137h10.985c1.515,0,2.651-1.263,2.524-2.777C42.308,19.707,41.045,18.697,39.782,18.697z"></path>
+      </svg>
+    </div>
 
     <!-- if you don't want to use the buttons Flickity provides -->
     <!-- <button @click="previous()">Custom Previous Button</button>

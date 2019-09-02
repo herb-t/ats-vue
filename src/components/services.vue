@@ -5,15 +5,21 @@
     padding: 100px 0;
   }
 
-  .ats-page {
+  /* .ats-page {
     overflow: hidden;
     position: relative;
+  } */
+
+  .services__heading {
+    background: url(/static/images/title-bg-service.png) no-repeat 51.5% 50%;
+    background-size: 850px;
+    text-align: center;
   }
 
   .services__title {
     color: #fff;
+    margin-bottom: 54px;
     margin-top: 0;
-    text-align: center;
   }
 
   .ats-grid__col {
@@ -117,9 +123,20 @@
     display: block;
   }
 
+  @media (max-width: 901px) {
+    .ats-card {
+      margin: 0 auto;
+      max-width: 400px;
+    }
+  }
+
   @media (min-width: 900px) {
     .ats-card {
       display: flex;
+    }
+
+    .services__heading {
+      background-size: 1100px;
     }
 
     .ats-card__title {
@@ -152,7 +169,9 @@
 
 <template>
   <div class="services" id="services">
-    <h1 class="services__title">{{ label }}</h1>
+    <div class="services__heading">
+      <h1 class="services__title">{{ label }}</h1>
+    </div>
 
     <div class="ats-page">
       <div class="ats-grid">

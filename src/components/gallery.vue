@@ -1,40 +1,38 @@
 <style scoped>
   .gallery {
-    
+    margin: 54px 0;
   }
 </style>
 
 <template>
   <div class="gallery" id="gallery">
-    <!-- <div class="ats-main">
-      <div class="gallery__title">
-        <h1>{{title}}</h1>
-      </div>
-    </div> -->
 
-    <ats_carousel_cakes></ats_carousel_cakes>
-    <ats_carousel_cupcakes></ats_carousel_cupcakes>
-    <ats_carousel_desserts></ats_carousel_desserts>
+    <ats_carousel title="Cakes" v-bind:slides="cakes" id="cakes"></ats_carousel>
+
+    <ats_carousel title="Cupcakes" v-bind:slides="cupcakes" id="cupcakes"></ats_carousel>
+
+    <ats_carousel title="Desserts" v-bind:slides="desserts" id="desserts"></ats_carousel>
 
   </div>
 </template>
 
 <script>
-import carousel_cakes from './carousel_cakes.vue'
-import carousel_cupcakes from './carousel_cupcakes.vue'
-import carousel_desserts from './carousel_desserts.vue'
+import carousel from './carousel.vue'
+
+import {cakes, cupcakes, desserts} from './data/carousel.js'
 
 export default {
   name: 'gallery',
   data () {
     return {
-      title: 'Gallery'
+      title: 'Gallery',
+      cakes: cakes,
+      cupcakes: cupcakes,
+      desserts: desserts
     }
   },
   components: {
-    ats_carousel_cakes: carousel_cakes,
-    ats_carousel_cupcakes: carousel_cupcakes,
-    ats_carousel_desserts: carousel_desserts
+    ats_carousel: carousel,
 	}
 }
 </script>
