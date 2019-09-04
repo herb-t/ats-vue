@@ -120,7 +120,7 @@
 
           <div class="contact__name">
             <h2>Laura Nielsen Torres</h2>
-            <div class="contact__name-divider"></div>
+            <!-- <div class="contact__name-divider"></div> -->
             <p>Pastry Chef</p>
           </div>
 

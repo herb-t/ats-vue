@@ -32,7 +32,7 @@ export default {
     }
   },
   components: {
-    ats_carousel: carousel,
+    ats_carousel: carousel
 	}
 }
 </script>

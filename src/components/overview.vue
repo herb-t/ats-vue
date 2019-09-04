@@ -61,7 +61,7 @@
     height: 1px;
     width: 100px;
   }
-  
+
   .flickity-viewport {
     padding: 0;
   }
@@ -99,6 +99,13 @@
     display: none;
   }
 
+  @media (max-width: 901px) {
+    .overview {
+      overflow: hidden;
+      position: relative;
+    }
+  }
+
   @media (min-width: 900px) {
     .overview {
       padding: 100px 0;
@@ -127,7 +134,7 @@
   <div class="overview" id="overview">
     <div class="ats-page">
       <div class="ats-grid">
-        <div class="overview__card ats-grid__col ats-grid__col--3" v-for="card in cards">
+        <div class="overview__card ats-grid__col ats-grid__col--3" v-for="card in cards" :key="card.id">
           <div class="overview__card-container" :id="card.id">
             <div class="overview__card-icon">
               <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="42.443px" height="42.444px" viewBox="0 0 42.443 42.444" enable-background="new 0 0 42.443 42.444" xml:space="preserve">
@@ -160,7 +167,7 @@
 
       <div class="overview__mobile">
         <flickity ref="flickity" :options="flickityOptions">
-          <div class="card-carousel-cell" v-for="card in cards">
+          <div class="card-carousel-cell" v-for="card in cards" :key="card.id">
             <div class="overview__card-carousel-container">
               <div class="overview__card-icon">
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="42.443px" height="42.444px" viewBox="0 0 42.443 42.444" enable-background="new 0 0 42.443 42.444" xml:space="preserve">
@@ -175,15 +182,15 @@
                   c-0.632-0.632-0.379-1.137,0.505-1.137h10.985c1.515,0,2.651-1.263,2.524-2.777C42.308,19.707,41.045,18.697,39.782,18.697z"></path>
                 </svg>
               </div>
-  
+
               <h2 class="overview__card-title" v-html="card.title">{{card.title}}</h2>
               <div class="overview__card-br"></div>
-  
+
               <h4 class="overview__card-subtitle">{{card.subtitle}}</h4>
               <p class="overview__card-text">{{card.serving1}}</p>
               <p class="overview__card-text">{{card.serving2}}</p>
               <p class="overview__card-text">{{card.serving3}}</p>
-  
+
               <div class="overview__card-cta">
                 <button class="ats-button modal-toggle">{{cta_label}}</button>
               </div>
@@ -235,23 +242,22 @@ export default {
         prevNextButtons: false,
         pageDots: true,
         wrapAround: true,
-        fullscreen: true,
-        // any options from Flickity can be used
-      },
+        fullscreen: true
+      }
     }
   },
   mounted: function() {
     let controller = new ScrollMagic.Controller();
 
     const tl = new TimelineMax();
-    tl.to("#one", 1, {y: 0, autoAlpha: 1, ease: Power2.easeOut});
-    tl.to("#two", 1, {y: 0, autoAlpha: 1, ease: Power3.easeOut}, 0.25);
-    tl.to("#three", 1, {y: 0, autoAlpha: 1, ease: Power4.easeOut}, 0.5);
+    tl.to('#one', 1, {y: 0, autoAlpha: 1, ease: Power2.easeOut});
+    tl.to('#two', 1, {y: 0, autoAlpha: 1, ease: Power3.easeOut}, 0.25);
+    tl.to('#three', 1, {y: 0, autoAlpha: 1, ease: Power4.easeOut}, 0.5);
 
     new ScrollMagic.Scene({
-      triggerElement: ".overview",
-      triggerHook: "onEnter", // show, when scrolled 10% into view
-      duration: "80%", // use full viewport
+      triggerElement: '.overview',
+      triggerHook: 'onEnter', // show, when scrolled 10% into view
+      duration: '80%' // use full viewport
       // offset: 50 // move trigger to center of element
     })
     .setTween(tl)
@@ -259,6 +265,6 @@ export default {
   },
   components: {
     Flickity
-  },
+  }
 }
 </script>

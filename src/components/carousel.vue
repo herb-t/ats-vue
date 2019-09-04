@@ -16,6 +16,10 @@
     background: #cf6059 !important;
   }
 
+  .overview__mobile .flickity-viewport {
+    overflow: initial;
+  }
+
   .overview__mobile .flickity-page-dots .dot {
     background: #fff !important;
   }
@@ -84,11 +88,6 @@
   }
 
   @media (min-width: 900px) {
-    .carousel__title {
-      font-size: 48px;
-      line-height: 56px;
-    }
-
     .carousel__copy {
       background: url(/static/images/title-bg-cupcakes.png) no-repeat center center;
       background-size: 1080px;
@@ -104,7 +103,7 @@
     </div>
 
     <flickity :id="id" ref="flickity" :options="flickityOptions">
-      <div class="carousel-cell" v-for="slide in slides">
+      <div class="carousel-cell" v-for="slide in slides" :key="slide.id">
         <img :src="slide.url">
       </div>
     </flickity>
@@ -130,7 +129,7 @@
 </template>
 
 <script>
-import Flickity from 'vue-flickity';
+import Flickity from 'vue-flickity'
 
 export default {
   name: 'carousel',
@@ -145,7 +144,7 @@ export default {
         wrapAround: true,
         imagesLoaded: true
         // any options from Flickity can be used
-      },
+      }
     }
   },
   components: {
@@ -153,11 +152,11 @@ export default {
   },
   methods: {
     next() {
-      this.$refs.flickity.next();
+      this.$refs.flickity.next()
     },
     
     previous() {
-      this.$refs.flickity.previous();
+      this.$refs.flickity.previous()
     }
   }
 }

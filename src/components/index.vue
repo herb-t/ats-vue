@@ -1,6 +1,6 @@
 <style scoped>
   .ats-main {
-    
+
   }
 </style>
 
@@ -36,7 +36,7 @@ export default {
     ats_gallery: gallery,
     ats_services: services,
     ats_contact: contact,
-    ats_modal: modal,
+    ats_modal: modal
 	},
   mounted: function() {
     let body_ = document.querySelector('body')

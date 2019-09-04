@@ -144,11 +144,6 @@
       padding: 100px 0;
     }
 
-    .services__title {
-      font-size: 48px;
-      line-height: 56px;
-    }
-  
     .ats-card {
       display: flex;
     }
@@ -194,7 +189,7 @@
 
     <div class="ats-page">
       <div class="ats-grid">
-        <div class="ats-grid__col" v-for="(card, index) in cards">
+        <div class="ats-grid__col" v-for="(card, index) in cards" :key="card.id">
           <div class="ats-card" :id="card.id">
             <div class="ats-card__title" v-if="index === 0" :id="index">
               <svg version="1.1" class="desktop" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 161.5 71.9" style="enable-background:new 0 0 161.5 71.9;" xml:space="preserve">
@@ -466,7 +461,7 @@
                 c0.505,0.505,1.137,0.758,1.768,0.758c0.632,0,1.263-0.253,1.642-0.631c1.01-1.011,1.01-2.778,0-3.788l-7.702-7.702
                 c-0.632-0.632-0.379-1.137,0.505-1.137h10.985c1.515,0,2.651-1.263,2.524-2.777C42.308,19.707,41.045,18.697,39.782,18.697z" class="icon-asterisk-fill"></path></svg>
             </div>
-            
+
             <div class="ats-card__copy">
               <p class="ats-card__text" v-html="card.text">{{card.text}}</p>
 
@@ -512,18 +507,17 @@ export default {
       const element = elements[index];
 
       const tl = new TimelineMax();
-      tl.to(element.querySelector('.ats-card'), 2, {x: 0, autoAlpha: 1, ease: Power2.easeOut});
+      tl.to(element.querySelector('.ats-card'), 2, {x: 0, autoAlpha: 1, ease: Power2.easeOut})
 
       new ScrollMagic.Scene({
         triggerElement: element,
-        triggerHook: "onEnter", // show, when scrolled 10% into view
-        duration: "50%", // use full viewport
-        // offset: 50 // move trigger to center of element
+        triggerHook: 'onEnter', // show, when scrolled 10% into view
+        duration: '50%'
       })
       .setTween(tl)
       .addTo(controller);
-      
     }
   }
 }
+
 </script>

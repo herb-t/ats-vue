@@ -27,13 +27,14 @@
     display: none;
   }
 
-  .header__nav-list {
+  /* .header__nav-list {
     display: flex;
     justify-content: space-between;
-  }
+  } */
   
   .header__nav-list-item {
-    flex: 1;
+    display: inline-block;
+    /* flex: 1; */
     margin-right: 24px;
   }
 

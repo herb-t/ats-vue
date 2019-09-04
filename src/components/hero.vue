@@ -1,6 +1,6 @@
 <style scoped>
   .hero {
-    margin-top: 56px;
+    /* margin-top: 56px; */
     overflow: hidden;
     position: relative;
   }
@@ -88,7 +88,7 @@
 </style>
 
 <template>
-  <div class="hero parallax-section">
+  <div class="hero">
     <div class="hero__background"></div>
     <div class="ats-page">
       <div class="hero__content ats-grid">
@@ -253,14 +253,13 @@
       new ScrollMagic.Scene({
         triggerElement: trigger,
         triggerHook: 1,
-        duration: '200%',
+        duration: '200%'
       })
       .setTween(TweenMax.to(image, 1, {
         y: '80%',
-        ease: Linear.easeNone,
+        ease: Linear.easeNone
       }))
       .addTo(controller);
-      
     }
   }
 
