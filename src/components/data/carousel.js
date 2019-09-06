@@ -8,8 +8,11 @@ const cakes = [
   {
     url: '/static/images/content/cake-deco-penguins.jpg'
   },
+  // {
+  //   url: '/static/images/content/cake-teacher-x.jpg'
+  // },
   {
-    url: '/static/images/content/cake-teacher-x.jpg'
+    url: '/static/images/content/cake-19-8.jpg'
   },
   {
     url: '/static/images/content/cake-bday-7.jpg'
@@ -41,8 +44,11 @@ const cakes = [
   {
     url: '/static/images/content/cake-wedding-flower.jpg'
   },
+  // {
+  //   url: '/static/images/content/cake-custom-2.jpg'
+  // },
   {
-    url: '/static/images/content/cake-custom-2.jpg'
+    url: '/static/images/content/cake-19-1.jpg'
   },
   {
     url: '/static/images/content/cake-custom-3.jpg'
@@ -69,10 +75,19 @@ const cupcakes = [
     url: '/static/images/content/cupcakes-pops.jpg'
   },
   {
+    url: '/static/images/content/cupcake-19-1.jpg'
+  },
+  {
+    url: '/static/images/content/cupcake-19-2.jpg'
+  },
+  {
     url: '/static/images/content/cupcakes-3.jpg'
   },
   {
     url: '/static/images/content/cupcakes-4.jpg'
+  },
+  {
+    url: '/static/images/content/dessert-19-4.jpg'
   },
   {
     url: '/static/images/content/cupcakes-5.jpg'
@@ -95,8 +110,11 @@ const desserts = [
   {
     url: '/static/images/content/carving-rasp-flower.jpg'
   },
+  // {
+  //   url: '/static/images/content/fruit-tray_variety.jpg'
+  // },
   {
-    url: '/static/images/content/fruit-tray_variety.jpg'
+    url: '/static/images/content/dessert-19-1.jpg'
   },
   {
     url: '/static/images/content/carving-1_sml.jpg'
@@ -116,8 +134,11 @@ const desserts = [
   {
     url: '/static/images/content/carving-x_1.jpg'
   },
+  // {
+  //   url: '/static/images/content/fruit-tray.jpg'
+  // },
   {
-    url: '/static/images/content/fruit-tray.jpg'
+    url: '/static/images/content/dessert-19-3.jpg'
   },
   {
     url: '/static/images/content/strawberries.jpg'
