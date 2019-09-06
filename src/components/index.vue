@@ -39,22 +39,22 @@ export default {
     ats_modal: modal
 	},
   mounted: function() {
-    let body_ = document.querySelector('body')
-    let modal_ = this.$el.querySelector('.modal');
-    let modalContainer_ = modal_.querySelector('.modal__container');
-    let modalBackdrop_ = modal_.querySelector('.modal__backdrop');
+    let _body = document.querySelector('body')
+    let _modal = this.$el.querySelector('.modal');
+    let _modalContainer = _modal.querySelector('.modal__container');
+    let _modalBackdrop = _modal.querySelector('.modal__backdrop');
     let elements = this.$el.querySelectorAll('.modal-toggle');
 
     const tl = new TimelineMax({paused: true});
 
-    tl.to(modal_, 0.1, {
+    tl.to(_modal, 0.1, {
       autoAlpha: 1,
     });
-    tl.to(modalBackdrop_, 0.2, {
+    tl.to(_modalBackdrop, 0.2, {
       autoAlpha: 1,
       ease: Linear.easeOut
     })
-    tl.to(modalContainer_, 0.3, {
+    tl.to(_modalContainer, 0.3, {
       autoAlpha: 1,
       y: '-50%',
       x: '-50%',
@@ -65,14 +65,14 @@ export default {
       const element = elements[index];
 
       element.addEventListener('click', () => {
-        if (!modal_.classList.contains('modal-is-showing')) {
-          modal_.classList.add('modal-is-showing')
+        if (!_modal.classList.contains('modal-is-showing')) {
+          _body.classList.add('modal-is-showing')
+          _modal.classList.add('modal-is-showing')
           tl.play();
-          body_.classList.add('modal-is-showing')
         } else {
-          modal_.classList.remove('modal-is-showing')
+          _body.classList.remove('modal-is-showing')
+          _modal.classList.remove('modal-is-showing')
           tl.reverse();
-          body_.classList.remove('modal-is-showing')
         }
       });
     }

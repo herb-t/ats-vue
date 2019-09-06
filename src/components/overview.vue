@@ -20,7 +20,6 @@
     box-shadow: 0 10px 20px rgba(0,0,0,.19), 0 6px 6px rgba(0,0,0,.23);
     margin: 0 auto;
     max-width: 400px;
-    /* opacity: 0; */
     padding: 24px 16px;
     transform: translateY(500px);
   }
@@ -73,7 +72,6 @@
     justify-content: center;
     text-align: center;
     width: 100%;
-    /* center images in cells with flexbox */
   }
 
   .is-fullscreen .card-carousel-cell {

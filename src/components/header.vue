@@ -26,15 +26,9 @@
   .header__nav {
     display: none;
   }
-
-  /* .header__nav-list {
-    display: flex;
-    justify-content: space-between;
-  } */
   
   .header__nav-list-item {
     display: inline-block;
-    /* flex: 1; */
     margin-right: 24px;
   }
 
@@ -153,7 +147,6 @@
     bottom: 0;
     -webkit-box-shadow: inset 0 1px 0 0 #dadce0;
     box-shadow: inset 0 1px 0 0 #dadce0;
-    /* height: 136px; */
     left: 0;
     padding-bottom: 24px;
     padding-left: 16px;
@@ -207,7 +200,6 @@
 <template>
   <header class="header">
     <div class="header__lockup">
-      <!-- <h1>{{ label }}</h1> -->
       <svg version="1.1" class="header__lockup-logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="635.607px" height="85.606px" viewBox="0 0 635.607 85.606" enable-background="new 0 0 635.607 85.606" xml:space="preserve">
         <path class="logo-lockup-fill" d="M73.862,42.425c0.254,2.146-1.515,4.04-3.66,4.04H54.04c-1.264,0-1.642,0.758-0.631,1.642l11.236,11.237
           c1.516,1.515,1.643,4.04,0,5.556c-0.758,0.632-1.642,1.011-2.524,1.011c-0.884,0-1.895-0.379-2.651-1.138L47.979,53.41
@@ -281,16 +273,16 @@
     <div class="header__nav">
       <ul class="header__nav-list">
         <li class="header__nav-list-item">
-          <a class="header__nav-list-item-link jump-link">overview</a>
+          <a class="header__nav-list-item-link jump-link" data-jumpto="overview">cakes</a>
         </li>
         <li class="header__nav-list-item">
-          <a class="header__nav-list-item-link jump-link">gallery</a>
+          <a class="header__nav-list-item-link jump-link" data-jumpto="gallery">gallery</a>
         </li>
         <li class="header__nav-list-item">
-          <a class="header__nav-list-item-link jump-link">services</a>
+          <a class="header__nav-list-item-link jump-link" data-jumpto="services">services</a>
         </li>
         <li class="header__nav-list-item">
-          <a class="header__nav-list-item-link jump-link">contact</a>
+          <a class="header__nav-list-item-link jump-link" data-jumpto="contact">contact</a>
         </li>
       </ul>
     </div>
@@ -435,21 +427,21 @@
         </div>
         <ul class="header__drawer-list">
           <li class="header__drawer-list-item">
-            <a class="header__drawer-list-item-link jump-link" v-on:click="handleDrawerToggle">overview</a>
+            <a class="header__drawer-list-item-link jump-link" data-jumpto="overview" v-on:click="handleDrawerToggle">cakes</a>
           </li>
           <li class="header__drawer-list-item">
-            <a class="header__drawer-list-item-link jump-link" v-on:click="handleDrawerToggle">gallery</a>
+            <a class="header__drawer-list-item-link jump-link" data-jumpto="gallery" v-on:click="handleDrawerToggle">gallery</a>
           </li>
           <li class="header__drawer-list-item">
-            <a class="header__drawer-list-item-link jump-link" v-on:click="handleDrawerToggle">services</a>
+            <a class="header__drawer-list-item-link jump-link" data-jumpto="services" v-on:click="handleDrawerToggle">services</a>
           </li>
           <li class="header__drawer-list-item">
-            <a class="header__drawer-list-item-link jump-link" v-on:click="handleDrawerToggle">contact</a>
+            <a class="header__drawer-list-item-link jump-link" data-jumpto="contact" v-on:click="handleDrawerToggle">contact</a>
           </li>
         </ul>
 
         <div class="header__drawer-cta">
-          <button class="ats-button modal-toggle">Find out more</button>
+          <button class="ats-button modal-toggle">{{drawer_cta_label}}</button>
         </div>
       </div>
 
@@ -464,7 +456,7 @@ export default {
   name: 'site_header',
   data () {
     return {
-      label: 'ATS'
+      drawer_cta_label: 'Find out more'
     }
   },
   mounted: function() {
@@ -472,13 +464,12 @@ export default {
 
     for (let index = 0; index < elements.length; index++) {
       const element = elements[index];
-
-      let target_ = '#' + element.textContent;
+      const _target = '#' + element.getAttribute('data-jumpto');
 
       element.addEventListener('click', () => {
         TweenMax.to(window, 0.6, {
           scrollTo: {
-            y: target_
+            y: _target
           },
           ease: Power1.easeOut
         });

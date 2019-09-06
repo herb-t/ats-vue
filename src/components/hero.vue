@@ -1,6 +1,5 @@
 <style scoped>
   .hero {
-    /* margin-top: 56px; */
     overflow: hidden;
     position: relative;
   }
@@ -33,15 +32,13 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    bottom: 0;
     display: block;
-    /* height: 100%; */
+    height: 100%;
     left: 0;
     pointer-events: none;
     position: absolute;
-    right: 0;
     top: 0;
-    /* width: 100%; */
+    width: 100%;
     z-index: 1;
   }
 
@@ -243,9 +240,9 @@
         </div>
         <div class="hero__copy ats-grid__col ats-grid__col--2">
           <div class="hero__copy-container">
-            <h1 class="hero__title">HandMade.<br>Just for you.</h1>
+            <h1 class="hero__title" v-html="title">{{title}}</h1>
             <div class="hero__br"></div>
-            <p class="hero__text">Life is full of special occasions! From newborn babies to graduations, weddings and birthdays, there's always something to celebrate! Let us add to the celebration by creating something special and unique to the event. Whether it's cupcakes, fruit and dessert trays, or a custom designed cake, everything is better with A Touch of Sweetness!</p>
+            <p class="hero__text">{{text}}</p>
           </div>
         </div>
       </div>
@@ -260,34 +257,37 @@
     name: 'hero',
     data () {
       return {
-        label: 'Hero'
+        title: 'HandMade.<br>Just for you.',
+        text: "Life is full of special occasions! From newborn babies to graduations, weddings and birthdays, there's always something to celebrate! Let us add to the celebration by creating something special and unique to the event. Whether it's cupcakes, fruit and dessert trays, or a custom designed cake, everything is better with A Touch of Sweetness!"
       }
     },
     mounted: function() {
-      // console.log(this.$el.querySelector('.hero__background'));
-      const trigger = this.$el.querySelector('.hero');
-      const image = this.$el.querySelector('.hero__background');
+      const _trigger = this.$el.querySelector('.hero');
+      const _image = this.$el.querySelector('.hero__background');
 
-      const controller = new ScrollMagic.Controller();
-
-      new ScrollMagic.Scene({
-        triggerElement: trigger,
-        triggerHook: 1,
-        duration: '200%'
-      })
-      .setTween(TweenMax.to(image, 1, {
-        y: '80%',
-        ease: Linear.easeNone
-      }))
-      .addTo(controller);
+      const _controller = new ScrollMagic.Controller();
 
       atsLoadImages([
         '/static/images/bg-hero-mobile-1.jpg',
         '/static/images/bg-hero-10_flip.jpg'
-      ], imagesAreLoaded);
+      ], this._imagesAreLoaded);
 
-      function imagesAreLoaded() {
-        document.querySelector('.hero__background-placeholder').classList.add('images-loaded');
+      new ScrollMagic.Scene({
+        triggerElement: _trigger,
+        triggerHook: 1,
+        duration: '200%'
+      })
+      .setTween(TweenMax.to(_image, 1, {
+        y: '80%',
+        ease: Linear.easeNone
+      }))
+      .addTo(_controller);
+    },
+    methods: {
+      _imagesAreLoaded: function() {
+        const _bgPlaceholder = this.$el.querySelector('.hero__background-placeholder');
+
+        _bgPlaceholder.classList.add('images-loaded');
       }
     }
   }

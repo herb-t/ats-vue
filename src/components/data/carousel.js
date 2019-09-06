@@ -1,4 +1,4 @@
-const cakes = [  
+const cakes = [
   {
     url: '/static/images/content/cake-teacher.jpg'
   },
@@ -58,7 +58,7 @@ const cakes = [
   }
 ]
 
-const cupcakes = [  
+const cupcakes = [
   {
     url: '/static/images/content/cupcakes-1.jpg'
   },
@@ -82,7 +82,7 @@ const cupcakes = [
   }
 ]
 
-const desserts = [  
+const desserts = [
   {
     url: '/static/images/content/carving-star.jpg'
   },

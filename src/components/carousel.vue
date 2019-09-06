@@ -104,7 +104,7 @@
 
     <flickity :id="id" ref="flickity" :options="flickityOptions">
       <div class="carousel-cell" v-for="slide in slides" :key="slide.id">
-        <img :src="slide.url">
+        <img :src="slide.url" alt="A Touch of Sweetness">
       </div>
     </flickity>
 
@@ -121,10 +121,6 @@
         c-0.632-0.632-0.379-1.137,0.505-1.137h10.985c1.515,0,2.651-1.263,2.524-2.777C42.308,19.707,41.045,18.697,39.782,18.697z"></path>
       </svg>
     </div>
-
-    <!-- if you don't want to use the buttons Flickity provides -->
-    <!-- <button @click="previous()">Custom Previous Button</button>
-    <button @click="next()">Custom Next Button</button> -->
   </div>
 </template>
 
@@ -149,15 +145,6 @@ export default {
   },
   components: {
     Flickity
-  },
-  methods: {
-    next() {
-      this.$refs.flickity.next()
-    },
-    
-    previous() {
-      this.$refs.flickity.previous()
-    }
   }
 }
 </script>

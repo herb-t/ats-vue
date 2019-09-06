@@ -119,17 +119,16 @@
           <div class="contact__br"></div>
 
           <div class="contact__name">
-            <h2>Laura Nielsen Torres</h2>
-            <!-- <div class="contact__name-divider"></div> -->
-            <p>Pastry Chef</p>
+            <h2>{{name}}</h2>
+            <p>{{label}}</p>
           </div>
 
           <div class="contact__location">
-            <h3>Ann Arbor, Michigan</h3>
+            <h3>{{location}}</h3>
           </div>
 
           <div class="contact__phone">
-            <h3>(678)499-4378</h3>
+            <h3>{{phone}}</h3>
           </div>
 
           <div class="contact__social">
@@ -184,7 +183,10 @@ export default {
   name: 'contact',
   data () {
     return {
-      label: 'Contact'
+      name: 'Laura Nielsen Torres',
+      label: 'Pastry Chef',
+      location: 'Ann Arbor, Michigan',
+      phone: '(678)499-4378'
     }
   }
 }

@@ -80,10 +80,6 @@
   }
 
   .ats-page {
-    /* box-sizing: border-box;
-    margin: 0 auto;
-    max-width: 1280px;
-    padding: 0 16px; */
     box-sizing: content-box;
     margin: 0 auto;
     max-width: 568px;
@@ -147,12 +143,6 @@
   .ats-card__span {
     font-weight: 700 !important;
   }
-
-  /* .modal-is-showing .modal__backdrop,
-  .modal-is-showing .modal__container {
-    opacity: 1 !important;
-    visibility: visible !important;
-  } */
 
   body.modal-is-showing,
   body.header__drawer--is-showing {

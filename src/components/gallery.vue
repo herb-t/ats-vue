@@ -25,7 +25,6 @@ export default {
   name: 'gallery',
   data () {
     return {
-      title: 'Gallery',
       cakes: cakes,
       cupcakes: cupcakes,
       desserts: desserts

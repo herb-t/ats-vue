@@ -73,11 +73,6 @@
   }
 
   @media (min-width: 900px) {
-    /* .modal__container {
-      height: 70%;
-      padding: 32px;
-      width: 70%;
-    } */
 
     .modal__backdrop {
       top: 64px;
@@ -102,8 +97,9 @@
          </svg>
         </button>
       </div>
+
       <div class="modal__content">
-          <iframe class="modal__iframe" src="https://docs.google.com/forms/d/e/1FAIpQLSeLiZBTBSEXeWDxZsS411gzx4ELKVnVaXF5b9Q9_INGg_Pkpg/viewform?embedded=true" width="640" height="1108" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        <iframe class="modal__iframe" src="https://docs.google.com/forms/d/e/1FAIpQLSeLiZBTBSEXeWDxZsS411gzx4ELKVnVaXF5b9Q9_INGg_Pkpg/viewform?embedded=true" width="640" height="1108" frameborder="0" marginheight="0" marginwidth="0">{{iframe_label}}</iframe>
       </div>
     </div>
 
@@ -116,7 +112,7 @@ export default {
   name: 'modal',
   data () {
     return {
-      label: 'Modal'
+      iframe_label: 'Loading…'
     }
   }
 }

@@ -8,11 +8,6 @@
     position: relative;
   }
 
-  /* .ats-page {
-    overflow: hidden;
-    position: relative;
-  } */
-
   .services__heading {
     background: url(/static/images/title-bg-service.png) no-repeat 51.5% 50%;
     background-size: 850px;
@@ -51,7 +46,6 @@
   .ats-card__title {
     flex: 1;
     margin: 0 24px;
-    /* max-width: 200px; */
   }
 
   .ats-card__title .mobile {
