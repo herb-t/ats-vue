@@ -14,6 +14,7 @@
     <ats_services></ats_services>
     <ats_contact></ats_contact>
     <ats_modal></ats_modal>
+    <ats_share></ats_share>
   </main>
 
 </template>
@@ -26,6 +27,7 @@ import gallery from './gallery.vue'
 import services from './services.vue'
 import contact from './contact.vue'
 import modal from './modal.vue'
+import share from './share.vue'
 
 export default {
   name: 'index',
@@ -36,7 +38,8 @@ export default {
     ats_gallery: gallery,
     ats_services: services,
     ats_contact: contact,
-    ats_modal: modal
+    ats_modal: modal,
+    ats_share: share
 	},
   mounted: function() {
     let body_ = document.querySelector('body')
@@ -67,15 +70,42 @@ export default {
       element.addEventListener('click', () => {
         if (!modal_.classList.contains('modal-is-showing')) {
           modal_.classList.add('modal-is-showing')
-          tl.play();
           body_.classList.add('modal-is-showing')
+          tl.play();
         } else {
           modal_.classList.remove('modal-is-showing')
-          tl.reverse();
           body_.classList.remove('modal-is-showing')
+          tl.reverse();
         }
       });
     }
+
+    const controller = new ScrollMagic.Controller();
+    const shareIn = new TimelineMax();
+    const shareOut = new TimelineMax();
+    const overview_ = this.$el.querySelector('.overview');
+    const services_ = this.$el.querySelector('.services');
+    const share_ = this.$el.querySelector('.share');
+    
+    shareIn.to(share, 0.6, {x: 0});
+    shareOut.to(share, 0.6, {x: 500});
+
+
+    new ScrollMagic.Scene({
+      triggerElement: overview_,
+      triggerHook: 0,
+    })
+    .setTween(TweenMax.to(share_, 0.6, {x: 0, ease: Power4.easeOut}))
+    .addTo(controller);
+
+    new ScrollMagic.Scene({
+      triggerElement: services_,
+      triggerHook: 0,
+      offset: 80 // move trigger to center of element
+    })
+    .setTween(TweenMax.to(share_, 0.8, {x: 200, ease: Power2.easeOut}))
+    .addTo(controller);
+
   },
 }
 </script>
