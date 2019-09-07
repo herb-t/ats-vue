@@ -473,6 +473,13 @@ export default {
           },
           ease: Power1.easeOut
         });
+
+        ga('send', {
+          hitType: 'event',
+          eventCategory: 'Header nav',
+          eventAction: 'click',
+          eventLabel: element.parentElement.getAttribute('class') + ' - ' + _target
+        });
       })
     }
   },
@@ -484,6 +491,14 @@ export default {
       if (!drawer.classList.contains('header__drawer--is-showing')) {
         drawer.classList.add('header__drawer--is-showing')
         body_.classList.add('header__drawer--is-showing')
+
+        ga('send', {
+          hitType: 'event',
+          eventCategory: 'Mobile drawer open',
+          eventAction: 'click',
+          eventLabel: 'hamburger icon'
+        });
+
       } else {
         drawer.classList.remove('header__drawer--is-showing')
         body_.classList.remove('header__drawer--is-showing')

@@ -134,7 +134,7 @@
           <div class="contact__social">
             <ul class="contact__social-list">
               <li class="contact__social-list-item">
-                <a href="https://www.facebook.com/A-Touch-of-Sweetness-119688634753755/?fref=ts" class="contact__social-list-link" target="_blank">
+                <a href="https://www.facebook.com/A-Touch-of-Sweetness-119688634753755/?fref=ts" class="contact__social-list-link" target="_blank" v-on:click="handleContactClick('contact - facebook')">
                   <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 38.4 38.4" style="enable-background:new 0 0 38.4 38.4;" xml:space="preserve">
                   <path id="facebook-circle-icon_2_" class="st0" d="M19.2,0C8.6,0,0,8.6,0,19.2c0,10.6,8.6,19.2,19.2,19.2s19.2-8.6,19.2-19.2
                     S29.8,0,19.2,0z M24.9,11.3c0,0-1.9,0-2.7,0c-0.9,0-1.1,0.4-1.1,1.4c0,0.8,0,2.4,0,2.4h3.8l-0.4,4.2H21v12.4h-5V19.3h-2.6v-4.2h2.7
@@ -143,8 +143,8 @@
                 </a>
               </li>
               <li class="contact__social-list-item">
-                <a href="mailto:laurason1@aim.com">
-                  <svg version="1.1" class="contact__social-list-link" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-286 377.6 38.4 38.4" style="enable-background:new -286 377.6 38.4 38.4;" xml:space="preserve">
+                <a href="mailto:laurason1@aim.com" class="contact__social-list-link" v-on:click="handleContactClick('contact - email')">
+                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-286 377.6 38.4 38.4" style="enable-background:new -286 377.6 38.4 38.4;" xml:space="preserve">
                   <g id="XMLID_1_">
                     <g>
                       <path class="st0" d="M-255.7,396l-0.1,1.7c0,1.7-0.2,3.5-0.2,3.5s-0.2,1.5-0.9,2.2c-0.8,0.8-1.8,0.8-2.2,0.9
@@ -187,6 +187,16 @@ export default {
       label: 'Pastry Chef',
       location: 'Ann Arbor, Michigan',
       phone: '(678)499-4378'
+    }
+  },
+  methods: {
+    handleContactClick: function (_label) {
+      ga('send', {
+        hitType: 'event',
+        eventCategory: 'Contact',
+        eventAction: 'click',
+        eventLabel: _label
+      });
     }
   }
 }

@@ -69,6 +69,14 @@ export default {
           _body.classList.add('modal-is-showing')
           _modal.classList.add('modal-is-showing')
           tl.play();
+
+          ga('send', {
+            hitType: 'event',
+            eventCategory: 'Find out more cta',
+            eventAction: 'click',
+            eventLabel: element.parentElement.getAttribute('class')
+          });
+
         } else {
           _body.classList.remove('modal-is-showing')
           _modal.classList.remove('modal-is-showing')
