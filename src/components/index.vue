@@ -74,7 +74,7 @@ export default {
             hitType: 'event',
             eventCategory: 'Find out more cta',
             eventAction: 'click',
-            eventLabel: element.parentElement.getAttribute('class')
+            eventLabel: element.getAttribute('id')
           });
 
         } else {

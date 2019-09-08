@@ -5,7 +5,7 @@
   }
 
   .flickity-button-icon {
-    fill: #cf6059 !important;
+    fill: #ddb4b6 !important;
   }
 
   .flickity-page-dots {
@@ -13,7 +13,7 @@
   }
 
   .flickity-page-dots .dot {
-    background: #cf6059 !important;
+    background: #ddb4b6 !important;
   }
 
   .overview__mobile .flickity-viewport {

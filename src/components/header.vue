@@ -18,9 +18,9 @@
 
   .header__lockup-logo {
     fill: #cf6059;
-    height: auto;
-    max-width: 255px;
+    height: 32px;
     vertical-align: middle;
+    width: 237.578px;
   }
 
   .header__nav {
@@ -78,7 +78,9 @@
 
   .header__hamburger-icon {
     fill: #cf6059;
+    height: 24px;
     vertical-align: middle;
+    width: 24px;
   }
 
   /* off canvas mobile nav */
@@ -180,6 +182,11 @@
     .header {
       height: 64px;
       padding: 0 32px;
+    }
+
+    .header__lockup-logo {
+      height: 36px;
+      width: 267.281px;
     }
 
     .header__nav {
@@ -441,7 +448,7 @@
         </ul>
 
         <div class="header__drawer-cta">
-          <button class="ats-button modal-toggle">{{drawer_cta_label}}</button>
+          <button id="header_drawer_cta" class="ats-button modal-toggle">{{drawer_cta_label}}</button>
         </div>
       </div>
 

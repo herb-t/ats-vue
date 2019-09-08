@@ -97,15 +97,16 @@
     transform: translateX(-125%);
   }
 
-  /* .ats-card__br {
-    background: #cf6059;
+  .ats-card__br {
+    background: #ddb4b6;
     margin: 24px auto 0;
     height: 2px;
     width: 50px;
-  } */
+  }
 
   .ats-card__br svg {
     display: block;
+    display: none;
     fill: #cf6059;
     height: 16px;
     margin: 24px auto 0;
@@ -462,7 +463,7 @@
               <p class="ats-card__text" v-html="card.text">{{card.text}}</p>
 
               <div class="ats__card-cta">
-                <button class="ats-button modal-toggle">{{cta_label}}</button>
+                <button class="ats-button modal-toggle" :id="'services_cta_' + card.id">{{cta_label}}</button>
               </div>
             </div>
           </div>

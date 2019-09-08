@@ -54,10 +54,10 @@
   }
 
   .overview__card-br {
-    background: #cf6059;
+    background: #ddb4b6;
     display: block;
     margin: 0 auto 24px;
-    height: 1px;
+    height: 2px;
     width: 100px;
   }
 
@@ -157,7 +157,7 @@
             <p class="overview__card-text">{{card.serving3}}</p>
 
             <div class="overview__card-cta">
-              <button class="ats-button modal-toggle">{{cta_label}}</button>
+              <button class="ats-button modal-toggle" :id="'overview_cta_' + card.id">{{cta_label}}</button>
             </div>
           </div>
         </div>
@@ -190,7 +190,7 @@
               <p class="overview__card-text">{{card.serving3}}</p>
 
               <div class="overview__card-cta">
-                <button class="ats-button modal-toggle">{{cta_label}}</button>
+                <button class="ats-button modal-toggle" :id="'overview_mobile_cta_' + card.id">{{cta_label}}</button>
               </div>
             </div>
           </div>
@@ -211,7 +211,7 @@ export default {
       cta_label: 'Find out more',
       cards: [
         {
-          id: 'one',
+          id: 'two_layer_sheet',
           title: 'Two Layer<br>Sheet Cake',
           subtitle: 'STARTS @ $30',
           serving1: '1/4 Serves 25 - 30 Guests',
@@ -219,7 +219,7 @@ export default {
           serving3: 'Full Serves 80 - 90 Guests'
         },
         {
-          id: 'two',
+          id: 'three_layer_sheet',
           title: 'Three Layer<br>Sheet Cake',
           subtitle: 'STARTS @ $30',
           serving1: '6" Serves 15 - 18 Guests',
@@ -227,7 +227,7 @@ export default {
           serving3: '10" Serves 40 - 45 Guests'
         },
         {
-          id: 'three',
+          id: 'two_layer_round',
           title: 'Two Layer<br>Round Cake',
           subtitle: 'STARTS @ $25',
           serving1: '6" Serves 10 - 12 Guests',
@@ -248,9 +248,9 @@ export default {
     let controller = new ScrollMagic.Controller();
 
     const tl = new TimelineMax();
-    tl.to('#one', 1, {y: 0, autoAlpha: 1, ease: Power2.easeOut});
-    tl.to('#two', 1, {y: 0, autoAlpha: 1, ease: Power3.easeOut}, 0.25);
-    tl.to('#three', 1, {y: 0, autoAlpha: 1, ease: Power4.easeOut}, 0.5);
+    tl.to('#two_layer_sheet', 1, {y: 0, autoAlpha: 1, ease: Power2.easeOut});
+    tl.to('#three_layer_sheet', 1, {y: 0, autoAlpha: 1, ease: Power3.easeOut}, 0.25);
+    tl.to('#two_layer_round', 1, {y: 0, autoAlpha: 1, ease: Power4.easeOut}, 0.5);
 
     new ScrollMagic.Scene({
       triggerElement: '.overview',
