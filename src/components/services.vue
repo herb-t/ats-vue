@@ -45,7 +45,6 @@
 
   .ats-card__title {
     flex: 1;
-    margin: 0 24px;
   }
 
   .ats-card__title .mobile {
@@ -62,7 +61,6 @@
 
   .ats-card__copy {
     flex: 2;
-    margin: 0 24px;
     text-align: center;
   }
 
@@ -89,17 +87,14 @@
     text-align: center;
   }
 
-  .ats-grid__col:nth-of-type(1) .ats-card {
+  .ats-grid__col:nth-of-type(1) .ats-card,
+  .ats-grid__col:nth-of-type(3) .ats-card {
     transform: translateX(125%);
   }
 
   .ats-grid__col:nth-of-type(2) .ats-card {
     flex-direction: row-reverse;
     transform: translateX(-125%);
-  }
-
-  .ats-grid__col:nth-of-type(3) .ats-card {
-    transform: translateX(125%);
   }
 
   /* .ats-card__br {
@@ -148,10 +143,17 @@
     }
 
     .ats-card__title {
+      margin-right: 24px;
       max-width: 200px;
     }
 
+    .ats-grid__col:nth-of-type(2) .ats-card__title {
+      margin-left: 24px;
+      margin-right: 0;
+    }
+
     .ats-card__copy {
+      margin: 0 24px;
       text-align: initial;
     }
 
