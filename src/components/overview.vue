@@ -202,6 +202,7 @@
 
 <script>
 import Flickity from 'vue-flickity';
+import Bowser from "bowser";
 
 export default {
   name: 'overview',
@@ -245,21 +246,27 @@ export default {
     }
   },
   mounted: function() {
-    let controller = new ScrollMagic.Controller();
+    const browser = Bowser.getParser(window.navigator.userAgent);
+    const platform = browser.getPlatformType();
+    const isMobile = platform === 'mobile' || platform === 'tablet';
 
-    const tl = new TimelineMax();
-    tl.to('#two_layer_sheet', 1, {y: 0, autoAlpha: 1, ease: Power2.easeOut});
-    tl.to('#three_layer_sheet', 1, {y: 0, autoAlpha: 1, ease: Power3.easeOut}, 0.25);
-    tl.to('#two_layer_round', 1, {y: 0, autoAlpha: 1, ease: Power4.easeOut}, 0.5);
+    if (!isMobile) {
+      let controller = new ScrollMagic.Controller();
 
-    new ScrollMagic.Scene({
-      triggerElement: '.overview',
-      triggerHook: 'onEnter', // show, when scrolled 10% into view
-      duration: '80%' // use full viewport
-      // offset: 50 // move trigger to center of element
-    })
-    .setTween(tl)
-    .addTo(controller);
+      const tl = new TimelineMax();
+      tl.to('#two_layer_sheet', 1, {y: 0, autoAlpha: 1, ease: Power2.easeOut});
+      tl.to('#three_layer_sheet', 1, {y: 0, autoAlpha: 1, ease: Power3.easeOut}, 0.25);
+      tl.to('#two_layer_round', 1, {y: 0, autoAlpha: 1, ease: Power4.easeOut}, 0.5);
+
+      new ScrollMagic.Scene({
+        triggerElement: '.overview',
+        triggerHook: 'onEnter', // show, when scrolled 10% into view
+        duration: '80%' // use full viewport
+        // offset: 50 // move trigger to center of element
+      })
+      .setTween(tl)
+      .addTo(controller);
+    }
   },
   components: {
     Flickity

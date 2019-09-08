@@ -98,12 +98,12 @@ const cupcakes = [
 ]
 
 const desserts = [
-  {
-    url: '/static/images/content/carving-star.jpg'
-  },
-  {
-    url: '/static/images/content/carving-penguin.jpg'
-  },
+  // {
+  //   url: '/static/images/content/carving-star.jpg'
+  // },
+  // {
+  //   url: '/static/images/content/carving-penguin.jpg'
+  // },
   {
     url: '/static/images/content/carving-x.jpg'
   },
@@ -128,9 +128,9 @@ const desserts = [
   {
     url: '/static/images/content/carving-2_sml.jpg'
   },
-  {
-    url: '/static/images/content/carving-3.jpg'
-  },
+  // {
+  //   url: '/static/images/content/carving-3.jpg'
+  // },
   {
     url: '/static/images/content/carving-x_1.jpg'
   },
@@ -143,8 +143,8 @@ const desserts = [
   {
     url: '/static/images/content/strawberries.jpg'
   },
-  {
-    url: '/static/images/content/carving-rasp.jpg'
-  }
+  // {
+  //   url: '/static/images/content/carving-rasp.jpg'
+  // }
 ]
 export {cakes, cupcakes, desserts}

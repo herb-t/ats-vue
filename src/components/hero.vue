@@ -278,15 +278,10 @@
       }
     },
     mounted: function() {
-      const _trigger = this.$el.querySelector('.hero');
-      const _image = this.$el.querySelector('.hero__background');
-
       const browser = Bowser.getParser(window.navigator.userAgent);
       const platform = browser.getPlatformType();
       const isMobile = platform === 'mobile' || platform === 'tablet';
       // const isDesktop = platform === 'desktop';
-
-      const _controller = new ScrollMagic.Controller();
 
       atsLoadImages([
         '/static/images/bg-hero-mobile-1.jpg',
@@ -294,6 +289,11 @@
       ], this._imagesAreLoaded);
 
       if (!isMobile) {
+        const _trigger = this.$el.querySelector('.hero');
+        const _image = this.$el.querySelector('.hero__background');
+
+        const _controller = new ScrollMagic.Controller();
+
         new ScrollMagic.Scene({
           triggerElement: _trigger,
           triggerHook: 1,
