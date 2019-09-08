@@ -1,13 +1,12 @@
 <style scoped>
   .contact {
-    background: #fff;
     background-color: #fff;
     background-image: url(/static/images/bg-contact.png);
-    background-repeat: no-repeat;
+    background-repeat: repeat-x;
     background-size: 1000px;
     background-position: center center;
-    margin-top: 24px;
-    padding: 0 0 72px;
+    margin: 24px 0;
+    padding: 32px 0;
     text-align: center;
   }
 
@@ -16,9 +15,9 @@
     margin: 0 0 24px 0;
   }
 
-  .ats-grid {
+  /* .ats-grid {
     transform: translateY(32px);
-  }
+  } */
 
   .contact__heading {
     fill: #cf6059;
@@ -75,9 +74,18 @@
     }
   }
 
-  @media (min-width: 640px) {
+  @media (min-width: 600px) {
     .contact {
-      background-size: cover;
+      background-size: 1600px;
+      margin: 12px 0;
+      padding: 36px 0;
+    }
+  }
+
+  @media (min-width: 900px) {
+    .contact {
+      margin: 32px 0;
+      padding: 54px 0;
     }
   }
 
