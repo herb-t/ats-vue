@@ -474,6 +474,10 @@
 </template>
 
 <script>
+import {TweenMax, TimelineMax} from 'gsap'
+import ScrollMagic from 'scrollmagic'
+import 'animation.gsap'
+
 export default {
   name: 'services',
   data () {

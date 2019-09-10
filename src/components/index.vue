@@ -19,6 +19,8 @@
 </template>
 
 <script>
+import {TweenMax, TimelineMax} from 'gsap'
+
 import site_header from './header.vue'
 import hero from './hero.vue'
 import overview from './overview.vue'

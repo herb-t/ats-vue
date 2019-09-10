@@ -459,6 +459,9 @@
 </template>
 
 <script>
+import TweenMax from "gsap/TweenMax";
+import {ScrollToPlugin} from "gsap/all";
+
 export default {
   name: 'site_header',
   data () {

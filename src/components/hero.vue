@@ -265,9 +265,11 @@
 </template>
 
 <script>
-
-  import {atsLoadImages} from './data/images.js';
+  import {TweenMax, TimelineMax} from 'gsap'
+  import ScrollMagic from 'scrollmagic'
+  import 'animation.gsap'
   import Bowser from "bowser";
+  import {atsLoadImages} from './data/images.js';
 
   export default {
     name: 'hero',
