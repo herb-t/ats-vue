@@ -189,6 +189,12 @@
       margin: 0 1.03799%;
       width: 31.25734%;
     }
+
+    .ats-grid__col--12 {
+      flex-basis: 97.92401%;
+      width: 97.92401%;
+      margin: 0 1.03799%;
+    }
   }
 
   @media (min-width: 1024px) {
